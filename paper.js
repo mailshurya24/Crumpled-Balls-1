@@ -9,7 +9,7 @@ class paper
             friction: 0.5,
             density: 1.2
         }
-        this.body = Bodies.circle(x,y,radius,options);
+        this.body = Bodies.circle(x,y,radius/2.7,options);
         this.radius = radius;
         World.add(world,this.body);
 
@@ -18,6 +18,6 @@ class paper
     display(){
         var pos = this.body.position;
         fill("purple");
-        ellipse(pos.x,pos.y,width,height);
+        ellipse(pos.x,pos.y,this.radius,this.radius);
     }
 }
